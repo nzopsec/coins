@@ -5,5 +5,17 @@
 	<body>
 		<h1>Hi World</h1>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.slim.js" ></script>
+		
+		<script type="text/javascript">
+    var socket = io.connect('http://socket.coincap.io');
+
+    socket.on('trades', function (tradeMsg) {
+        console.log(tradeMsg);
+    })
+
+    socket.on('global', function (globalMsg) {
+        console.log(globalMsg);
+    })
+</script>
 	</body>
 </html>
